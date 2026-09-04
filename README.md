@@ -18,6 +18,10 @@ Produces a read-only Linux health report covering memory, CPU-normalized load, d
 
 Monitors authorized HTTPS pages with ETag support, normalized text snapshots, bounded diffs, SSRF protections, and optional Telegram notification.
 
+### [Agent Memory](https://github.com/Utasu/agent-memory)
+
+Shared Markdown memory for several agents working on one project. Every write takes an exclusive lock and lands atomically, writes that look like credentials are refused, and the test suite proves the guarantee with six concurrent writers.
+
 ## Working style
 
 - Small, testable milestones
@@ -28,6 +32,6 @@ Monitors authorized HTTPS pages with ETag support, normalized text snapshots, bo
 
 ## Current toolkit
 
-`Python` · `SQLite` · `REST APIs` · `Telegram Bot API` · `Linux` · `systemd` · `Git` · `GitHub Actions`
+`Python` · `SQLite` · `REST APIs` · `Telegram Bot API` · `Linux` · `systemd` · `Git` · `GitHub Actions` · `Concurrency & file locking`
 
 Based in China (UTC+8) · Available 5–8 hours per week
